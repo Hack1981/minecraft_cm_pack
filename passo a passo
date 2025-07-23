@@ -1,0 +1,53 @@
+✅ Requisitos:
+
+    Você já tem o Linux funcionando (dual boot).
+
+    Já montou a partição onde o Windows está instalado.
+
+    Os arquivos do Windows estão acessíveis em:
+    /media/angelo/D8BC5DD9BC5DB32C/Windows/System32/config/ ou em outro diretorio vc deve achar onde está o seu.
+
+🔧 Etapas para apagar a senha:
+1. Abra o terminal.
+2. Execute o chntpw no SAM:
+
+sudo /usr/sbin/chntpw -i /media/angelo/D8BC5DD9BC5DB32C/Windows/System32/config/SAM
+
+3. No menu principal, digite:
+
+1
+
+(e pressione Enter para ir para o menu de usuários)
+4. Escolha o RID do usuário (exemplo: 03e9 para “Ângelo Silva”), e pressione Enter.
+5. No menu do usuário, escolha:
+
+1
+
+(que é: Clear (blank) user password)
+
+Você verá uma mensagem confirmando:
+
+Password cleared!
+
+6. Digite:
+
+q
+
+para sair do menu de usuário.
+7. Digite:
+
+q
+
+novamente para sair do programa.
+8. Quando ele perguntar:
+
+Write hive files? (y/n) [n] :
+
+Digite:
+
+y
+
+e pressione Enter para salvar as alterações no arquivo SAM.
+✅ Pronto!
+
+Agora é só reiniciar no Windows. A senha da conta que você editou estará em branco — basta clicar no nome de usuário e apertar Enter para entrar, sem digitar nada.
